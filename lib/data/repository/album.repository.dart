@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 
 class AlbumRepository{
-  final _base_url = "https://jsonplaceholder.typicode.com"; //as we did in in retrofit in compose
+  final _base_url = "https://jsonplaceholder.typicode.com"; //retrofit similarity
   Future<List<Map<String, dynamic>>> fetchAlbums() async {
     final albumResponse = await http.get(Uri.parse("${_base_url}/albums"));
     final photoResponse = await http.get(Uri.parse("${_base_url}/photos"));

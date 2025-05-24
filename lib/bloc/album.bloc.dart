@@ -14,7 +14,7 @@ class AlbumBloc extends Bloc<AlbumEvent, AlbumState> {
         final albums = await repository.fetchAlbums();
         emit(AlbumLoaded(albums));
       } catch (e) {
-        emit(AlbumError(e.toString()));
+        emit(AlbumError("Error as occured when trying to fetch the albums try again"));
       }
     });
   }
